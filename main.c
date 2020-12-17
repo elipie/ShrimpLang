@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "lexer.h"
+
 
 char* read_file(char* fname) {
   FILE* f = fopen(fname, "r");
@@ -33,9 +35,11 @@ char* read_file(char* fname) {
 
 int main() {
   char* filename = "main.shr";
-
   char* contents = read_file(filename);
-  
+  initializeScanner(contents);
+  printToken(scan());
+  printToken(scan());
+  printToken(scan());
   // todo — everything
 
   return 0;
