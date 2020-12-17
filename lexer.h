@@ -1,5 +1,6 @@
 #ifndef lexer_h
 #define lexer_h
+
 struct Token {
 enum TokenType {
   T_VAR, // var
@@ -23,6 +24,9 @@ enum TokenType {
 
   int line;
 };
+
 struct Token scan(void);
+void initializeScanner(char*);
+void printToken(struct Token);
 
 #endif
