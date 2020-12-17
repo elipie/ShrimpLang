@@ -30,3 +30,4 @@ void initializeScanner(char*);
 void printToken(struct Token);
 
 #endif
+ 
